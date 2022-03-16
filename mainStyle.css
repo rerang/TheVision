@@ -9,9 +9,16 @@ body{
 a:focus{
     color: gray;
 }
-#staticNav{
+a:visited{
+    color: gray;
+}
+a{
+    color: gray;
+    text-decoration: none;
+}
+.staticNavContainer{
     width: 100%;
-    height: 100px;
+    height: 7rem;
 
     vertical-align: middle;
     margin: 0;
@@ -20,44 +27,50 @@ a:focus{
     
     font-family: 'Gemunu Libre', sans-serif;
 
+}
+.staticNav{
+    width: 100%;
+    height: 100%;
     color: gray;
     background-color: ghostwhite;
-    font-size: 3rem;
-    line-height: 100px;
     display: inline-grid;
-    text-align: center;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-columns: 5fr 1fr 1fr;
 }
-#pageDescription{
+.pageDescription{
     padding-left: 40px;
-    text-align: left;
+    justify-self: left;
+    display: flex;
+    align-content: center;
+}
+.navMainText{
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
     font-weight: bold;
-    font-size: 2rem;
 }
-#navMainText{
-    text-decoration: none;
+.navGroupName{
+    font-size: 3rem;
 }
-#navMainText:visited{
-    text-decoration: none;
-    color: gray;
+.navSlash{
+    align-self: end;
+    font-size: 1.5rem;
 }
-#navGroupName{
-    font-size: 2.5rem;
+.navMajorName{
+    align-self: end;
+    font-size: 1.5rem;
 }
-#navSlash{
-    font-size: 1.6rem;
-    color:black;
-}
-#navMajorName{
-    font-size: 1.6rem;
-}
-#navIcon{
-    color: khaki;
+.navIcon{
+    background-color: rgba(59, 59, 59, 0.5);
+    box-shadow: 0 0 1rem rgba(59, 59, 59);
+    border-radius: 25%;
+    width: 4rem;
+    margin: 0 15px;
 }
 .nav{
     font-size: 1.5rem;
     text-decoration: none;
     align-self: center;
+    text-align: center;
 }
 .nav:visited{
     text-decoration: none;
@@ -66,47 +79,52 @@ a:focus{
 
 
 .space{
-    height: 100px;
+    height: 7rem;
 }
-
-#groupDescription{
+.groupDescriptionContainer{
+    width: 100%;
+    margin-top: 1rem;
+}
+.groupDescription{
+    width: calc(100% - 6rem);
+    padding: 0 3rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 30px 30px;
-    justify-content: center;
-    vertical-align: middle;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-#mainImg{
+.mainImg{
+    width: 30rem;
+    height: 30rem;
+    box-shadow: 0 0 3rem rgba(59, 59, 59, 0.2);
+    background: radial-gradient(rgba(59, 59, 59), rgba(59, 59, 59, 0.3), rgba(59, 59, 59, 0));
+    border-radius: 35%
+}
+.groupGoal{
     width: 80%;
-    display: block;
-    margin: 0px auto;
-    min-width: 500px;
-    background-color: rgba(59, 59, 59, 0.7);
-    border-radius: 100px;
-}
-#groupGoal{
     line-height: 1.2;
-    font-size: 4rem;
-    min-width: 800px;
+    font-size: 6rem;
     display: grid;
     grid-template-rows:  1fr 1fr 2fr;
-    justify-content: center;
-    padding: 10% 10px;
+    align-items: center;
+    padding: 7rem 0;
     row-gap: 5%;
+    font-family: 'Kaushan Script', cursive;
 }
-#groupGoalTextFirstLine{
+.groupGoalTextFirstLine{
     margin-top: 30px;
     justify-self: start;
 }
-#groupGoalTextSecondLine{
+.groupGoalTextSecondLine{
     justify-self: end; 
 }
-#groupGoalTextGroupName{
+.groupGoalTextGroupName{
     margin-top: 30px;
     line-height: 1.2;
     font-size: 8rem;
     font-weight: bold;
+    justify-self: center; 
 }
 #groupGoalTextFirstLine, #groupGoalTextSecondLine{
     font-style: italic;
